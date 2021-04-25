@@ -46,34 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\Form_Authorization.cs">
+    <Compile Include="Forms\FormAuthorization.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Authorization.Designer.cs">
-      <DependentUpon>Form_Authorization.cs</DependentUpon>
+    <Compile Include="Forms\FormAuthorization.Designer.cs">
+      <DependentUpon>FormAuthorization.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_CreatingOrder.cs">
+    <Compile Include="Forms\FormCreatingOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_CreatingOrder.Designer.cs">
-      <DependentUpon>Form_CreatingOrder.cs</DependentUpon>
+    <Compile Include="Forms\FormCreatingOrder.Designer.cs">
+      <DependentUpon>FormCreatingOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Manager.cs">
+    <Compile Include="Forms\FormManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Manager.Designer.cs">
-      <DependentUpon>Form_Manager.cs</DependentUpon>
+    <Compile Include="Forms\FormManager.Designer.cs">
+      <DependentUpon>FormManager.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Form_Authorization.resx">
-      <DependentUpon>Form_Authorization.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormAuthorization.resx">
+      <DependentUpon>FormAuthorization.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_CreatingOrder.resx">
-      <DependentUpon>Form_CreatingOrder.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormCreatingOrder.resx">
+      <DependentUpon>FormCreatingOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Manager.resx">
-      <DependentUpon>Form_Manager.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormManager.resx">
+      <DependentUpon>FormManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -103,6 +103,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\profile_icon_183860.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\social_media_logo_google_plus_icon-icons.com_56623.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,29 +10,29 @@ using System.Windows.Forms;
 
 namespace HomeWork.Forms
 {
-    public partial class Form_Manager : Form
+    public partial class FormManager : Form
     {
         private string login;
 
-        public Form_Manager(string login)
+        public FormManager(string login)
         {
             InitializeComponent();
 
             this.login = login;
 
-            pictureBox_avatar.Image = Properties.Resources.profile_icon_183860;
+            pictureBoxavatar.Image = Properties.Resources.profile_icon_183860;
             label_Login.Text = "@" + login;
         }
 
 
-        private void Form_Manager_FormClosing(object sender, FormClosingEventArgs e)
+        private void FormManager_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Owner.Close();
+            Application.Exit();
         }
 
-        private void button_CreatingOrder_Click(object sender, EventArgs e)
+        private void buttonCreatingOrder_Click(object sender, EventArgs e)
         {
-            Form f_CO = new Forms.Form_CreatingOrder();
+            Form f_CO = new Forms.FormCreatingOrder();
             f_CO.ShowDialog();
         }
     }

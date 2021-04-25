@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HomeWork.Forms
 {
-    public partial class Form_CreatingOrder : Form
+    public partial class FormCreatingOrder : Form
     {
-        public Form_CreatingOrder()
+        public FormCreatingOrder()
         {
             InitializeComponent();
         }

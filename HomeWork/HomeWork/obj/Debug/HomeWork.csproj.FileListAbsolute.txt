@@ -10,3 +10,27 @@ C:\Users\Lily\source\repos\HomeWork\HomeWork\obj\Debug\HomeWork.exe
 C:\Users\Lily\source\repos\HomeWork\HomeWork\obj\Debug\HomeWork.pdb
 C:\Users\Lily\source\repos\HomeWork\HomeWork\obj\Debug\HomeWork.Forms.Form_Manager.resources
 C:\Users\Lily\source\repos\HomeWork\HomeWork\obj\Debug\HomeWork.Forms.Form_CreatingOrder.resources
+C:\Users\ПК\Downloads\HomeWork-master\HomeWork-master\HomeWork\HomeWork\bin\Debug\HomeWork.exe.config
+C:\Users\ПК\Downloads\HomeWork-master\HomeWork-master\HomeWork\HomeWork\bin\Debug\HomeWork.exe
+C:\Users\ПК\Downloads\HomeWork-master\HomeWork-master\HomeWork\HomeWork\bin\Debug\HomeWork.pdb
+C:\Users\ПК\Downloads\HomeWork-master\HomeWork-master\HomeWork\HomeWork\obj\Debug\HomeWork.csprojAssemblyReference.cache
+C:\Users\ПК\Downloads\HomeWork-master\HomeWork-master\HomeWork\HomeWork\obj\Debug\HomeWork.Form_Authorization.resources
+C:\Users\ПК\Downloads\HomeWork-master\HomeWork-master\HomeWork\HomeWork\obj\Debug\HomeWork.Forms.Form_CreatingOrder.resources
+C:\Users\ПК\Downloads\HomeWork-master\HomeWork-master\HomeWork\HomeWork\obj\Debug\HomeWork.Forms.Form_Manager.resources
+C:\Users\ПК\Downloads\HomeWork-master\HomeWork-master\HomeWork\HomeWork\obj\Debug\HomeWork.Properties.Resources.resources
+C:\Users\ПК\Downloads\HomeWork-master\HomeWork-master\HomeWork\HomeWork\obj\Debug\HomeWork.csproj.GenerateResource.cache
+C:\Users\ПК\Downloads\HomeWork-master\HomeWork-master\HomeWork\HomeWork\obj\Debug\HomeWork.csproj.CoreCompileInputs.cache
+C:\Users\ПК\Downloads\HomeWork-master\HomeWork-master\HomeWork\HomeWork\obj\Debug\HomeWork.exe
+C:\Users\ПК\Downloads\HomeWork-master\HomeWork-master\HomeWork\HomeWork\obj\Debug\HomeWork.pdb
+C:\Users\Lily\Desktop\Грёбанный демоэкзамен\HomeWork\HomeWork\bin\Debug\HomeWork.exe.config
+C:\Users\Lily\Desktop\Грёбанный демоэкзамен\HomeWork\HomeWork\bin\Debug\HomeWork.exe
+C:\Users\Lily\Desktop\Грёбанный демоэкзамен\HomeWork\HomeWork\bin\Debug\HomeWork.pdb
+C:\Users\Lily\Desktop\Грёбанный демоэкзамен\HomeWork\HomeWork\obj\Debug\HomeWork.csprojAssemblyReference.cache
+C:\Users\Lily\Desktop\Грёбанный демоэкзамен\HomeWork\HomeWork\obj\Debug\HomeWork.FormAuthorization.resources
+C:\Users\Lily\Desktop\Грёбанный демоэкзамен\HomeWork\HomeWork\obj\Debug\HomeWork.Forms.FormCreatingOrder.resources
+C:\Users\Lily\Desktop\Грёбанный демоэкзамен\HomeWork\HomeWork\obj\Debug\HomeWork.Forms.FormManager.resources
+C:\Users\Lily\Desktop\Грёбанный демоэкзамен\HomeWork\HomeWork\obj\Debug\HomeWork.Properties.Resources.resources
+C:\Users\Lily\Desktop\Грёбанный демоэкзамен\HomeWork\HomeWork\obj\Debug\HomeWork.csproj.GenerateResource.cache
+C:\Users\Lily\Desktop\Грёбанный демоэкзамен\HomeWork\HomeWork\obj\Debug\HomeWork.csproj.CoreCompileInputs.cache
+C:\Users\Lily\Desktop\Грёбанный демоэкзамен\HomeWork\HomeWork\obj\Debug\HomeWork.exe
+C:\Users\Lily\Desktop\Грёбанный демоэкзамен\HomeWork\HomeWork\obj\Debug\HomeWork.pdb
