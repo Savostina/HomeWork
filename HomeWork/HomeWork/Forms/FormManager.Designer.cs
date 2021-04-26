@@ -41,6 +41,12 @@ namespace HomeWork.Forms
             this.labelmenu = new System.Windows.Forms.Label();
             this.labelFiltration = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
+            this.OrderName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MiddleName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxavatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxlogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDBdata)).BeginInit();
@@ -96,7 +102,7 @@ namespace HomeWork.Forms
             this.labelViewing.AutoSize = true;
             this.labelViewing.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelViewing.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(95)))));
-            this.labelViewing.Location = new System.Drawing.Point(474, 12);
+            this.labelViewing.Location = new System.Drawing.Point(493, 12);
             this.labelViewing.Name = "labelViewing";
             this.labelViewing.Size = new System.Drawing.Size(314, 25);
             this.labelViewing.TabIndex = 4;
@@ -117,18 +123,28 @@ namespace HomeWork.Forms
             this.comboBoxFiltration.FormattingEnabled = true;
             this.comboBoxFiltration.Location = new System.Drawing.Point(213, 348);
             this.comboBoxFiltration.Name = "comboBoxFiltration";
-            this.comboBoxFiltration.Size = new System.Drawing.Size(575, 21);
+            this.comboBoxFiltration.Size = new System.Drawing.Size(629, 21);
             this.comboBoxFiltration.TabIndex = 6;
             // 
             // dataGridViewDBdata
             // 
             this.dataGridViewDBdata.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewDBdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDBdata.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.OrderName,
+            this.FirstName,
+            this.LastName,
+            this.MiddleName,
+            this.Product,
+            this.Price});
             this.dataGridViewDBdata.GridColor = System.Drawing.Color.White;
             this.dataGridViewDBdata.Location = new System.Drawing.Point(213, 49);
             this.dataGridViewDBdata.Name = "dataGridViewDBdata";
-            this.dataGridViewDBdata.Size = new System.Drawing.Size(575, 268);
+            this.dataGridViewDBdata.Size = new System.Drawing.Size(629, 268);
             this.dataGridViewDBdata.TabIndex = 8;
+            this.dataGridViewDBdata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDBdata_CellContentClick);
+            this.dataGridViewDBdata.AutoGenerateColumns = false;
+            // 
             // labelmenu
             // 
             this.labelmenu.AutoSize = true;
@@ -162,12 +178,42 @@ namespace HomeWork.Forms
             this.labelName.Size = new System.Drawing.Size(0, 20);
             this.labelName.TabIndex = 12;
             // 
+            // OrderName
+            // 
+            this.OrderName.HeaderText = "OrderName";
+            this.OrderName.Name = "OrderName";
+            // 
+            // FirstName
+            // 
+            this.FirstName.HeaderText = "FirstName";
+            this.FirstName.Name = "FirstName";
+            // 
+            // LastName
+            // 
+            this.LastName.HeaderText = "LastName";
+            this.LastName.Name = "LastName";
+            // 
+            // MiddleName
+            // 
+            this.MiddleName.HeaderText = "MiddleName";
+            this.MiddleName.Name = "MiddleName";
+            // 
+            // Product
+            // 
+            this.Product.HeaderText = "Product";
+            this.Product.Name = "Product";
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            // 
             // FormManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 382);
+            this.ClientSize = new System.Drawing.Size(854, 382);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.labelFiltration);
             this.Controls.Add(this.labelmenu);
@@ -205,5 +251,11 @@ namespace HomeWork.Forms
         private System.Windows.Forms.Label labelmenu;
         private System.Windows.Forms.Label labelFiltration;
         private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrderName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MiddleName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Product;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
     }
 }

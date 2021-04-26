@@ -14,7 +14,7 @@ namespace HomeWork.Entity
             OrdersHasProduct = new HashSet<OrdersHasProduct>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
 
         public int? client_id { get; set; }
