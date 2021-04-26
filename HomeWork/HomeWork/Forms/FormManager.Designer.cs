@@ -36,12 +36,11 @@ namespace HomeWork.Forms
             this.buttonCreatingOrder = new System.Windows.Forms.Button();
             this.labelViewing = new System.Windows.Forms.Label();
             this.pictureBoxlogo = new System.Windows.Forms.PictureBox();
-            this.comboBoxfname = new System.Windows.Forms.ComboBox();
-            this.comboBoxfnumber = new System.Windows.Forms.ComboBox();
+            this.comboBoxFiltration = new System.Windows.Forms.ComboBox();
             this.dataGridViewDBdata = new System.Windows.Forms.DataGridView();
             this.labelmenu = new System.Windows.Forms.Label();
-            this.labelfname = new System.Windows.Forms.Label();
-            this.labelfnumber = new System.Windows.Forms.Label();
+            this.labelFiltration = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxavatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxlogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDBdata)).BeginInit();
@@ -72,7 +71,7 @@ namespace HomeWork.Forms
             this.label_Login.AutoSize = true;
             this.label_Login.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_Login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label_Login.Location = new System.Drawing.Point(161, 18);
+            this.label_Login.Location = new System.Drawing.Point(12, 49);
             this.label_Login.Name = "label_Login";
             this.label_Login.Size = new System.Drawing.Size(23, 20);
             this.label_Login.TabIndex = 2;
@@ -84,7 +83,7 @@ namespace HomeWork.Forms
             this.buttonCreatingOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCreatingOrder.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonCreatingOrder.ForeColor = System.Drawing.Color.White;
-            this.buttonCreatingOrder.Location = new System.Drawing.Point(11, 79);
+            this.buttonCreatingOrder.Location = new System.Drawing.Point(8, 103);
             this.buttonCreatingOrder.Name = "buttonCreatingOrder";
             this.buttonCreatingOrder.Size = new System.Drawing.Size(196, 30);
             this.buttonCreatingOrder.TabIndex = 3;
@@ -97,7 +96,7 @@ namespace HomeWork.Forms
             this.labelViewing.AutoSize = true;
             this.labelViewing.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelViewing.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(95)))));
-            this.labelViewing.Location = new System.Drawing.Point(339, 17);
+            this.labelViewing.Location = new System.Drawing.Point(474, 12);
             this.labelViewing.Name = "labelViewing";
             this.labelViewing.Size = new System.Drawing.Size(314, 25);
             this.labelViewing.TabIndex = 4;
@@ -113,21 +112,13 @@ namespace HomeWork.Forms
             this.pictureBoxlogo.TabIndex = 5;
             this.pictureBoxlogo.TabStop = false;
             // 
-            // comboBoxfname
+            // comboBoxFiltration
             // 
-            this.comboBoxfname.FormattingEnabled = true;
-            this.comboBoxfname.Location = new System.Drawing.Point(213, 348);
-            this.comboBoxfname.Name = "comboBoxfname";
-            this.comboBoxfname.Size = new System.Drawing.Size(257, 21);
-            this.comboBoxfname.TabIndex = 6;
-            // 
-            // comboBoxfnumber
-            // 
-            this.comboBoxfnumber.FormattingEnabled = true;
-            this.comboBoxfnumber.Location = new System.Drawing.Point(531, 347);
-            this.comboBoxfnumber.Name = "comboBoxfnumber";
-            this.comboBoxfnumber.Size = new System.Drawing.Size(257, 21);
-            this.comboBoxfnumber.TabIndex = 7;
+            this.comboBoxFiltration.FormattingEnabled = true;
+            this.comboBoxFiltration.Location = new System.Drawing.Point(213, 348);
+            this.comboBoxFiltration.Name = "comboBoxFiltration";
+            this.comboBoxFiltration.Size = new System.Drawing.Size(575, 21);
+            this.comboBoxFiltration.TabIndex = 6;
             // 
             // dataGridViewDBdata
             // 
@@ -138,52 +129,50 @@ namespace HomeWork.Forms
             this.dataGridViewDBdata.Name = "dataGridViewDBdata";
             this.dataGridViewDBdata.Size = new System.Drawing.Size(575, 268);
             this.dataGridViewDBdata.TabIndex = 8;
-            // 
             // labelmenu
             // 
             this.labelmenu.AutoSize = true;
             this.labelmenu.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelmenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(95)))));
-            this.labelmenu.Location = new System.Drawing.Point(77, 52);
+            this.labelmenu.Location = new System.Drawing.Point(74, 76);
             this.labelmenu.Name = "labelmenu";
             this.labelmenu.Size = new System.Drawing.Size(64, 25);
             this.labelmenu.TabIndex = 9;
             this.labelmenu.Text = "Меню";
             // 
-            // labelfname
+            // labelFiltration
             // 
-            this.labelfname.AutoSize = true;
-            this.labelfname.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelfname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelfname.Location = new System.Drawing.Point(209, 325);
-            this.labelfname.Name = "labelfname";
-            this.labelfname.Size = new System.Drawing.Size(166, 20);
-            this.labelfname.TabIndex = 10;
-            this.labelfname.Text = "Фильтрация по имени";
+            this.labelFiltration.AutoSize = true;
+            this.labelFiltration.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelFiltration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelFiltration.Location = new System.Drawing.Point(209, 325);
+            this.labelFiltration.Name = "labelFiltration";
+            this.labelFiltration.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelFiltration.Size = new System.Drawing.Size(94, 20);
+            this.labelFiltration.TabIndex = 10;
+            this.labelFiltration.Text = "Фильтрация";
             // 
-            // labelfnumber
+            // labelName
             // 
-            this.labelfnumber.AutoSize = true;
-            this.labelfnumber.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelfnumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelfnumber.Location = new System.Drawing.Point(527, 325);
-            this.labelfnumber.Name = "labelfnumber";
-            this.labelfnumber.Size = new System.Drawing.Size(173, 20);
-            this.labelfnumber.TabIndex = 11;
-            this.labelfnumber.Text = "Фильтрация по номеру";
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelName.Location = new System.Drawing.Point(172, 17);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(0, 20);
+            this.labelName.TabIndex = 12;
             // 
-            // Form_Manager
+            // FormManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 382);
-            this.Controls.Add(this.labelfnumber);
-            this.Controls.Add(this.labelfname);
+            this.Controls.Add(this.labelName);
+            this.Controls.Add(this.labelFiltration);
             this.Controls.Add(this.labelmenu);
             this.Controls.Add(this.dataGridViewDBdata);
-            this.Controls.Add(this.comboBoxfnumber);
-            this.Controls.Add(this.comboBoxfname);
+            this.Controls.Add(this.comboBoxFiltration);
             this.Controls.Add(this.pictureBoxlogo);
             this.Controls.Add(this.labelViewing);
             this.Controls.Add(this.buttonCreatingOrder);
@@ -191,7 +180,7 @@ namespace HomeWork.Forms
             this.Controls.Add(this.labelManager);
             this.Controls.Add(this.pictureBoxavatar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form_Manager";
+            this.Name = "FormManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Менеджер";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormManager_FormClosing);
@@ -211,11 +200,10 @@ namespace HomeWork.Forms
         private System.Windows.Forms.Button buttonCreatingOrder;
         private System.Windows.Forms.Label labelViewing;
         private System.Windows.Forms.PictureBox pictureBoxlogo;
-        private System.Windows.Forms.ComboBox comboBoxfname;
-        private System.Windows.Forms.ComboBox comboBoxfnumber;
+        private System.Windows.Forms.ComboBox comboBoxFiltration;
         private System.Windows.Forms.DataGridView dataGridViewDBdata;
         private System.Windows.Forms.Label labelmenu;
-        private System.Windows.Forms.Label labelfname;
-        private System.Windows.Forms.Label labelfnumber;
+        private System.Windows.Forms.Label labelFiltration;
+        private System.Windows.Forms.Label labelName;
     }
 }

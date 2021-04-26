@@ -12,7 +12,6 @@ namespace HomeWork
 {
     public partial class FormAuthorization : Form
     {
-        public string login = "login1";
 
         public FormAuthorization()
         {
@@ -28,35 +27,45 @@ namespace HomeWork
 
         private void buttonAuthorization_Click(object sender, EventArgs e)
         {
-            try
+            using (Entity.EntityCodeFirst context = new Entity.EntityCodeFirst()) 
             {
-                if ((string.IsNullOrEmpty(textBoxLogin.Text) || (string.IsNullOrWhiteSpace(textBoxLogin.Text)) ||
-                    (string.IsNullOrEmpty(maskedTextBoxPas.Text) || (string.IsNullOrWhiteSpace(maskedTextBoxPas.Text)))))
-                    throw new Exception("Полькователя не существует");
+                string login = textBoxLogin.Text;
+                string password = maskedTextBoxPas.Text;
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Пожалуйста заполните все поля","Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+                var user = context.User.FirstOrDefault(_user => (_user.login == login && _user.password == password));
 
-            try
-            {
-                if (textBoxLogin.Text == login && maskedTextBoxPas.Text == "tuptup")
+                try
                 {
-                    Form f_M = new Forms.FormManager(login);
-                    f_M.Owner = this;
-                    f_M.Show();
+                    if ((string.IsNullOrEmpty(textBoxLogin.Text) || (string.IsNullOrWhiteSpace(textBoxLogin.Text)) ||
+                        (string.IsNullOrEmpty(maskedTextBoxPas.Text) || (string.IsNullOrWhiteSpace(maskedTextBoxPas.Text)))))
+                        throw new Exception();
+
                 }
-                else throw new Exception("Полькователя не существует");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Неправильный логин или пороль","Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            this.Hide();
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Пожалуйста заполните все поля", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                try
+                {
+                    if (user != null)
+                    {
+                        var userData = context.UserData.FirstOrDefault(_userData => (_userData.id == user.ud_id));
+                        Class.UserSingleton.FromDatabase(user, userData);
+                        Form f_M = new Forms.FormManager(login);
+                        f_M.Owner = this;
+                        f_M.Show();
+                    }
+                    else throw new Exception();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Неправильный логин или пороль", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                this.Hide();
+            } 
         }
 
         private void FormAuthorization_FormClosing(object sender, FormClosingEventArgs e)

@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +55,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\UserSinglton.cs" />
+    <Compile Include="Entity\Client.cs" />
+    <Compile Include="Entity\EntityCodeFirst.cs" />
+    <Compile Include="Entity\Orders.cs" />
+    <Compile Include="Entity\OrdersHasProduct.cs" />
+    <Compile Include="Entity\Product.cs" />
+    <Compile Include="Entity\User.cs" />
+    <Compile Include="Entity\UserData.cs" />
     <Compile Include="Forms\FormAuthorization.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +81,7 @@
     <Compile Include="Forms\FormManager.Designer.cs">
       <DependentUpon>FormManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\ModelUser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\FormAuthorization.resx">
@@ -85,6 +103,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -107,5 +126,6 @@
   <ItemGroup>
     <None Include="Properties\social_media_logo_google_plus_icon-icons.com_56623.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

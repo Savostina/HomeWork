@@ -22,12 +22,25 @@ namespace HomeWork.Forms
 
             pictureBoxavatar.Image = Properties.Resources.profile_icon_183860;
             label_Login.Text = "@" + login;
+
+            using (Entity.EntityCodeFirst context = new Entity.EntityCodeFirst())
+            {
+                var user = Class.UserSingleton.GetUser();
+
+
+                var selecteduser = context.User.FirstOrDefault(_user => (_user.id == _user.id));
+                labelName.Text = user.GetFirstName() +" "+ user.GetLastName() +" "+ user.GetMiddleName();
+
+
+            }
+
         }
 
 
         private void FormManager_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            if (e.CloseReason == CloseReason.UserClosing) this.Owner.Show();
+            //Application.Exit();
         }
 
         private void buttonCreatingOrder_Click(object sender, EventArgs e)
