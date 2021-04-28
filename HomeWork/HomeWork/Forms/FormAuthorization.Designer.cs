@@ -117,7 +117,7 @@ namespace HomeWork
             this.maskedTextBoxPas.Size = new System.Drawing.Size(153, 27);
             this.maskedTextBoxPas.TabIndex = 7;
             // 
-            // Form_Authorization
+            // FormAuthorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -130,10 +130,11 @@ namespace HomeWork
             this.Controls.Add(this.labelPas);
             this.Controls.Add(this.labelLogin);
             this.Controls.Add(this.labelWelcome);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form_Authorization";
+            this.Name = "FormAuthorization";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авторизация";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormAuthorization_FormClosing);

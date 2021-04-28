@@ -37,19 +37,19 @@ namespace HomeWork.Forms
             this.labelViewing = new System.Windows.Forms.Label();
             this.pictureBoxlogo = new System.Windows.Forms.PictureBox();
             this.comboBoxFiltration = new System.Windows.Forms.ComboBox();
-            this.dataGridViewDBdata = new System.Windows.Forms.DataGridView();
             this.labelmenu = new System.Windows.Forms.Label();
             this.labelFiltration = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.OrderName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MiddleName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxavatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxlogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDBdata)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxavatar
@@ -126,25 +126,6 @@ namespace HomeWork.Forms
             this.comboBoxFiltration.Size = new System.Drawing.Size(629, 21);
             this.comboBoxFiltration.TabIndex = 6;
             // 
-            // dataGridViewDBdata
-            // 
-            this.dataGridViewDBdata.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewDBdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDBdata.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.OrderName,
-            this.FirstName,
-            this.LastName,
-            this.MiddleName,
-            this.Product,
-            this.Price});
-            this.dataGridViewDBdata.GridColor = System.Drawing.Color.White;
-            this.dataGridViewDBdata.Location = new System.Drawing.Point(213, 49);
-            this.dataGridViewDBdata.Name = "dataGridViewDBdata";
-            this.dataGridViewDBdata.Size = new System.Drawing.Size(629, 268);
-            this.dataGridViewDBdata.TabIndex = 8;
-            this.dataGridViewDBdata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDBdata_CellContentClick);
-            this.dataGridViewDBdata.AutoGenerateColumns = false;
-            // 
             // labelmenu
             // 
             this.labelmenu.AutoSize = true;
@@ -178,15 +159,31 @@ namespace HomeWork.Forms
             this.labelName.Size = new System.Drawing.Size(0, 20);
             this.labelName.TabIndex = 12;
             // 
+            // dataGridView
+            // 
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.OrderName,
+            this.FirsName,
+            this.LastName,
+            this.MiddleName,
+            this.ProductColumn,
+            this.PriceColumn});
+            this.dataGridView.Location = new System.Drawing.Point(213, 49);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(629, 273);
+            this.dataGridView.TabIndex = 13;
+            this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
+            // 
             // OrderName
             // 
-            this.OrderName.HeaderText = "OrderName";
+            this.OrderName.HeaderText = "Order Name";
             this.OrderName.Name = "OrderName";
             // 
-            // FirstName
+            // FirsName
             // 
-            this.FirstName.HeaderText = "FirstName";
-            this.FirstName.Name = "FirstName";
+            this.FirsName.HeaderText = "FirsName";
+            this.FirsName.Name = "FirsName";
             // 
             // LastName
             // 
@@ -198,15 +195,15 @@ namespace HomeWork.Forms
             this.MiddleName.HeaderText = "MiddleName";
             this.MiddleName.Name = "MiddleName";
             // 
-            // Product
+            // ProductColumn
             // 
-            this.Product.HeaderText = "Product";
-            this.Product.Name = "Product";
+            this.ProductColumn.HeaderText = "Product";
+            this.ProductColumn.Name = "ProductColumn";
             // 
-            // Price
+            // PriceColumn
             // 
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
+            this.PriceColumn.HeaderText = "PriceColumn";
+            this.PriceColumn.Name = "PriceColumn";
             // 
             // FormManager
             // 
@@ -214,10 +211,10 @@ namespace HomeWork.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(854, 382);
+            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.labelFiltration);
             this.Controls.Add(this.labelmenu);
-            this.Controls.Add(this.dataGridViewDBdata);
             this.Controls.Add(this.comboBoxFiltration);
             this.Controls.Add(this.pictureBoxlogo);
             this.Controls.Add(this.labelViewing);
@@ -225,14 +222,17 @@ namespace HomeWork.Forms
             this.Controls.Add(this.label_Login);
             this.Controls.Add(this.labelManager);
             this.Controls.Add(this.pictureBoxavatar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Менеджер";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormManager_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxavatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxlogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDBdata)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,15 +247,15 @@ namespace HomeWork.Forms
         private System.Windows.Forms.Label labelViewing;
         private System.Windows.Forms.PictureBox pictureBoxlogo;
         private System.Windows.Forms.ComboBox comboBoxFiltration;
-        private System.Windows.Forms.DataGridView dataGridViewDBdata;
         private System.Windows.Forms.Label labelmenu;
         private System.Windows.Forms.Label labelFiltration;
         private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrderName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FirsName;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn MiddleName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Product;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PriceColumn;
     }
 }

@@ -23,7 +23,9 @@ namespace HomeWork.Forms
         public FormManager(string login)
         {
             InitializeComponent();
+            dataGridView.DataSource = null;
             db = new BindingList<dataGridItem>();
+
             InitDataGrid();
 
             this.login = login;
@@ -44,11 +46,12 @@ namespace HomeWork.Forms
 
         private void InintUsers(BindingList<dataGridItem> items)
         {
+
+            var list = new List<dataGridItem>();
             using (var context = new Entity.EntityCodeFirst())
             {
                 foreach (var client in context.Client)
                 {
-                    var item = new dataGridItem();
                     foreach (var _userData in context.UserData)
                     {
 
@@ -75,29 +78,30 @@ namespace HomeWork.Forms
                     }
                 }
             }
+
         }
 
 
         private void InitBindings()
         {
             OrderName.DataPropertyName = nameof(dataGridItem.orderName);
-            FirstName.DataPropertyName = nameof(dataGridItem.firstName);
+            FirsName.DataPropertyName = nameof(dataGridItem.firstName);
             LastName.DataPropertyName = nameof(dataGridItem.lastName);
             MiddleName.DataPropertyName = nameof(dataGridItem.surName);
-            Product.DataPropertyName = nameof(dataGridItem.product);
-            Price.DataPropertyName = nameof(dataGridItem.price);
-            //NumerOrder.DataPropertyName = nameof(Orders.name);
-            //Product.DataPropertyName = nameof(Product.name);
-            //Price.DataPropertyName = nameof(Product.price);
-
-
+            ProductColumn.DataPropertyName = nameof(dataGridItem.product);
+            PriceColumn.DataPropertyName = nameof(dataGridItem.price);
         }
 
         private void InitDataGrid()
         {
             InitBindings();
             InintUsers(db);
-            dataGridViewDBdata.DataSource = db;
+            var list = new List<dataGridItem>();
+
+            dataGridView.DataSource = new BindingSource 
+            { 
+                DataSource = db
+            };
         }
 
 
@@ -117,16 +121,22 @@ namespace HomeWork.Forms
         {
 
         }
+
+        private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var selected = dataGridView.Rows[e.RowIndex].Cells[0].Value;
+            MessageBox.Show(selected.ToString());
+        }
     }
 
     class dataGridItem
     {
-        public string orderName;
-        public string firstName;
-        public string surName;
-        public string lastName;
-        public string product;
-        public decimal price;
+        public string orderName{get; set; }
+        public string firstName{get; set; }
+        public string surName  {get; set; }
+        public string lastName {get; set; }
+        public string product {get; set; }
+        public decimal price   {get; set; }
         //public List<Entity.Product> products;
         //public Entity.UserData
     }

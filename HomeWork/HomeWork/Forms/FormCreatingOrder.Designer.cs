@@ -211,7 +211,10 @@ namespace HomeWork.Forms
             this.Controls.Add(this.buttonArrange);
             this.Controls.Add(this.labelCreatingOrder);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormCreatingOrder";
             this.Text = "Оформление заказа";
             this.ResumeLayout(false);
